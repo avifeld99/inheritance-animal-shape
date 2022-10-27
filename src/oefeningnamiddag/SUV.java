@@ -3,6 +3,7 @@ package oefeningnamiddag;
 public class SUV extends Car {
 
     private boolean bullbar;
+    private boolean fourxFour;
 
     public boolean getBullbar() {
         return bullbar;
@@ -12,9 +13,9 @@ public class SUV extends Car {
         this.bullbar = bullbar;
     }
 
-    //public void 4*4Driving(boolean) {
-
-    //}
+    public void setFourxFourDriving(boolean fourxFourDriving) {
+        this.fourxFour = fourxFourDriving;
+    }
 
     @Override
     public int getSpeed() {

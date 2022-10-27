@@ -10,12 +10,27 @@ public class Car {
 
     }
 
-    public Car(String color, int hp) {
-        this.color = color;
+    public Car(int speed, int hp) {
+        this.speed = speed;
         this.hp = hp;
     }
 
+    public Car(String color, int hp) {
+        setColor(color);
+        this.hp = hp;
+    }
 
+    public void accelerator(int amount) {
+        this.speed += (amount + (hp/100));
+    }
+
+    public void slow(int amount) {
+        this.speed -= (amount - (hp/100));
+    }
+
+    public void park(int amount) {
+        this.speed = 0;
+    }
 
     public String getColor() {
         return color;
@@ -23,37 +38,6 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-
-
-    public void accelerator(int amount) {
-        if (amount >= 0) {
-            amount += (hp/100);
-        }
-    }
-
-    public void slow(int amount) {
-        if (amount >= 0) {
-            amount -= (hp/100);
-        }
-    }
-
-    public void park(int amount) {
-        if (amount != 0) {
-            amount = 0;
-        }
     }
 
     public int getSpeed() {
